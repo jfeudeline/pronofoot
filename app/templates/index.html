@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hello, {{ user.username }}!</h1>
+
+    {% for match in matchs %}
+    <div>
+        <p>
+            {{ match.team_A.name }} ({{ match.team_A.rank }}) vs 
+            {{ match.team_B.name }} ({{ match.team_B.rank }})
+        </p>
+    </div>
+    {% endfor %}
+{% endblock %}
